@@ -1,7 +1,9 @@
 body{font-family: Arial, sans-serif;}
 
-.weather-app{max-width: 600px;
-             margin: 30px auto;
+
+.weather-app-wrapper{max-width: 600px;
+                     margin: 30px auto;}
+.weather-app{
             padding: 20px;
             border: 1px solid #dadde1;
             border-radius: 5px;}
@@ -21,4 +23,12 @@ padding: 0;
 font-size: 16px;
 font-weight: 100;
 line-height: 19px;}
+
+strong{color: blue;
+font-size: 50px;
+line-height: 1;
+font-weight: 400;}
         
+.units{position: relative;
+font-size: 16px;
+top: -24px;}
