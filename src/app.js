@@ -32,10 +32,31 @@ function displayTemperature(response){
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
+function search(city){
+    let apiKey = "c074fff8ce9bf681ae0a79acd0736419";
+    // let city = "london";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayTemperature);
 
-let apiKey = "c074fff8ce9bf681ae0a79acd0736419";
-let city = "london";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+}
 
 
-axios.get(apiUrl).then(displayTemperature);
+function handlesubmit(event){
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-Input");
+    search(cityInputElement.value);
+    // console.log(cityInputElement.value);
+}
+
+// let apiKey = "c074fff8ce9bf681ae0a79acd0736419";
+// let city = "london";
+// let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+
+// axios.get(apiUrl).then(displayTemperature);
+
+search("New York");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handlesubmit);
