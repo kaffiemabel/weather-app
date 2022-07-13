@@ -1,6 +1,6 @@
 body{font-family: Arial, sans-serif;
-    /* background-image: url(https://th.bing.com/th/id/R.4b55b7fbeec0a78d2180b736e6245bbd?rik=ok%2bTkOPKa5BoCA&pid=ImgRaw&r=0); */
-     }
+background-image: url();}
+
 
 
 .weather-app-wrapper{max-width: 600px;
@@ -51,4 +51,5 @@ top: -24px;}
                                     opacity: 0.6; 
                                     }
 .weather-forecast-temperatures{font-size: 13px;}
+.linkedln{text-decoration: none;}
                        
